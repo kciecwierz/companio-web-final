@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 240 10% 30%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 30%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 30%;
+
+    --primary: 255 70% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 48 96% 89%;
+    --secondary-foreground: 240 10% 30%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 265 80% 95%;
+    --accent-foreground: 240 10% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 255 70% 60%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 255 65% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 90% 80%;
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 6% 20%;
+    --muted-foreground: 240 5% 70%;
+
+    --accent: 265 70% 30%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 240 6% 25%;
+    --input: 240 6% 25%;
+    --ring: 255 65% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-companio-purple/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-companio-purple;
+  }
+}
+
+@layer components {
+  .companio-card {
+    @apply bg-white dark:bg-card rounded-2xl shadow-md p-6 transition-all hover:shadow-lg;
+  }
+  
+  .companio-button {
+    @apply rounded-full px-6 py-3 font-medium text-white bg-companio-purple hover:bg-companio-purple/90 shadow-md hover:shadow-lg transition-all;
+  }
+
+  .companio-input {
+    @apply rounded-xl border border-companio-gray-light bg-white dark:bg-card focus:border-companio-purple focus:ring-1 focus:ring-companio-purple transition-all p-3;
+  }
+}
