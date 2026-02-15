@@ -16,6 +16,7 @@ import Goals from "@/pages/Goals";
 import Profile from "@/pages/Profile";
 import Settings from "@/pages/Settings";
 import NotFound from "@/pages/NotFound";
+import SnowmanGame from "@/pages/SnowmanGame";
 
 // Components
 import Navigation from "@/components/Navigation";
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/" element={<Navigate to="/onboarding" />} />
               <Route path="/onboarding" element={<Onboarding />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/snowman" element={<SnowmanGame />} />
               <Route
                 path="/dashboard"
                 element={
