@@ -42,3 +42,20 @@ Ta wersja jest prototypem – stworzonym w celu prezentacji wizji aplikacji. Mo�
 ---
 
 Stworzono z pomocą [Lovable.dev](https://lovable.dev) i pasji do dobrostanu cyfrowego.
+
+
+## Dokument koncepcji: Agent Ani
+
+Szczegółowy zarys startowy projektu (cel, zakres v1, ograniczenia i plan 14 dni) znajduje się tutaj:
+
+- [`docs/agent-ani-v1.md`](docs/agent-ani-v1.md)
+
+
+## Agent Ani MVP
+
+W repo znajduje się prosty prototyp programu „Agent Ani” (widok web):
+
+- ścieżka: `/agent-ani`
+- funkcje v1: capture, automatyczna klasyfikacja (zadanie/wydarzenie/płatność/do kiedyś), sugestie przypomnień i codzienny briefing
+- dane są zapisywane lokalnie w `localStorage` (bez kont i integracji zewnętrznych)
+

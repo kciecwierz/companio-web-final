@@ -16,6 +16,7 @@ import Goals from "@/pages/Goals";
 import Profile from "@/pages/Profile";
 import Settings from "@/pages/Settings";
 import NotFound from "@/pages/NotFound";
+import AgentAni from "@/pages/AgentAni";
 
 // Components
 import Navigation from "@/components/Navigation";
@@ -32,7 +33,8 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Navigate to="/onboarding" />} />
+              <Route path="/" element={<Navigate to="/agent-ani" />} />
+              <Route path="/agent-ani" element={<AgentAni />} />
               <Route path="/onboarding" element={<Onboarding />} />
               <Route path="/auth" element={<Auth />} />
               <Route
